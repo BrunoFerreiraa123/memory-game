@@ -1,0 +1,101 @@
+const cards = document.querySelectorAll('.card');
+const submit = document.getElementById('restart');
+
+const boxDificulty = document.getElementById('dificulty');
+const btnEasy = document.getElementById('easy');
+const btnMedium = document.getElementById('medium');
+const btnHard = document.getElementById('hard');
+
+btnEasy.addEventListener('click', easy);
+btnMedium.addEventListener('click', medium);
+btnHard.addEventListener('click', hard);
+cards.forEach(card => card.addEventListener('click', flipCard));
+
+let hasFlippedCard = false;
+let firstCard, secondCard;
+let lockBoard = false;
+
+let counter = []
+
+function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
+
+  this.classList.add('flip');
+  document.body.style.backgroundColor = '#ffffff';
+
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+    return;
+  }
+  secondCard = this;
+  checkForMatch();
+}
+function checkForMatch() {
+  if (firstCard.dataset.animal === secondCard.dataset.animal) {
+    disableCards();
+    counter.push(1);
+    if (counter.length === 6) restart();
+    return;
+  }
+  document.body.style.backgroundColor = '#e25454ea';
+  unflipCards();
+}
+function disableCards() {
+  document.body.style.backgroundColor = '#13f067cc';
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard()
+}
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard()
+  }, 1000);
+}
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let ramdomPos = Math.floor(Math.random() * 12);
+    card.style.order = ramdomPos;
+  });
+})();
+
+function easy() {
+  const el = document.getElementById('game-easy');
+
+  el.style.display = 'flex';
+  boxDificulty.style.display = 'none';
+}
+
+function medium() {
+  const el = document.getElementById('game-medium');
+
+  el.style.display = 'flex';
+  boxDificulty.style.display = 'none';
+}
+
+function hard() {
+  const el = document.getElementById('game-hard');
+
+  el.style.display = 'flex';
+  boxDificulty.style.display = 'none';
+}
+
+
+function restart() {
+  submit.style.display = 'block';
+  document.body.style.backgroundColor = 'rgb(231, 231, 231)';
+  submit.addEventListener('click', () => { document.location.reload() });
+}

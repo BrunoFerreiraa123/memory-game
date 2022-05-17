@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(231, 231, 231);
+    overflow: hidden;
+}
+
+
+div.box h2 {
+    font-size: 85px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 5%;
+    color:#85c0fff5;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 3px 4px 14px -2px #000000;
+}
+
+#dificulty {
+    position: absolute;
+    top:50%;
+    left: 40%;
+    display: block;
+    transform: translateY(-50%);
+}
+
+input#restart {
+    display: none;
+    position: absolute;
+    top:75%;
+    transform: translateY(-50%);
+    left: 10%;
+    width: 150px;
+    height:50px ;
+    font-size: 26px;
+    border:0;
+    box-shadow: 3px 4px 14px -2px #000000;
+    border-radius: 15px;
+    outline: none;
+    background-color: #f25eff00;
+    color: #3b8eeef5;
+    cursor: pointer;
+}
+
+input#easy,
+input#medium,
+input#hard {
+    width: 250px;
+    height:80px ;
+    font-size: 30px;
+    border:2px solid #ccc;
+    box-shadow: 3px 4px 14px -2px #000000;
+    margin:10px;
+    border-radius: 20px;
+    outline: none;
+    background-color: #f25eff00;
+    color: #3b8eeef5;
+    cursor: pointer;
+}
+  
+#game-easy{
+    width: 100vw;
+    max-width: 1500px;
+    margin:50px auto;
+    display: none;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(100% / 4);
+    height: 200px;
+    margin: 2px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+#game-medium{
+    width: 100vw;
+    height: 100vh;
+    max-width: 1400px;
+    margin:2px auto;
+    display: none;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card-medium  {
+    width: calc(100% / 5);
+    height: calc(95% / 5);
+    margin: 2px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+#game-hard {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1600px;
+    margin-left: 16%;
+    margin-top: 4px;
+    display: none;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card-hard  {
+    width: calc(100% / 7);
+    height: calc(94% / 5);
+    margin: 2px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card:active {transform: scale(0.97); transition: transform .2s;}
+.memory-card-medium:active {transform: scale(0.97); transition: transform .2s;}
+.memory-card-hard:active {transform: scale(0.97); transition: transform .2s;}
+
+.memory-card.flip {transform: rotateY(180deg);}
+.memory-card-medium.flip {transform: rotateY(180deg);}
+.memory-card-hard.flip {transform: rotateY(180deg);}
+  
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    position: absolute;
+    border-radius: 5px;
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg)
+}
+
+.back-face {
+    background-color: #cce1f8f5;
+}
+.back-face h2 {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    color:#3b8eeef5;
+}

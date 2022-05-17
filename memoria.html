@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>Jogo<br>Da<br>Memória</h2>
+    <input type="button" id="restart" value="Reiniciar">
+
+    <div id="dificulty">
+      <input type="button" id="easy" value="Fácil">
+      <input type="button" id="medium" value="Médio">
+      <input type="button" id="hard" value="Difícil">
+    </div>
+  </div>
+
+  <section id="game-easy" class="memory-game">
+    <div class="card memory-card" data-animal="cat1">
+      <img class="front-face" src="Cats/Cat_1.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="cat1">
+      <img class="front-face" src="Cats/Cat_1.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="cat2">
+      <img class="front-face" src="Cats/Cat_2.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="cat2">
+      <img class="front-face" src="Cats/Cat_2.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="cat4">
+      <img class="front-face" src="Cats/Cat_4.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="cat4">
+      <img class="front-face" src="Cats/Cat_4.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="dog1">
+      <img class="front-face" src="Dogs/Dog_1.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="dog1">
+      <img class="front-face" src="Dogs/Dog_1.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="dog13">
+      <img class="front-face" src="Dogs/Dog_13.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="dog13">
+      <img class="front-face" src="Dogs/Dog_13.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="dog19">
+      <img class="front-face" src="Dogs/Dog_19.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+
+    <div class="card memory-card" data-animal="dog19">
+      <img class="front-face" src="Dogs/Dog_19.png">
+      <div class="back-face">
+        <h2>?</h2>
+      </div>
+    </div>
+  </section>
+
+<!--  ---------------------------------########------------------------------------->
+<!--  ---------------------------------########------------------------------------->
+<!--  ---------------------------------########------------------------------------->
+
+<section id="game-medium" class="memory-game">
+  <div class="card memory-card-medium" data-animal="cat1">
+    <img class="front-face" src="Cats/Cat_1.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat1">
+    <img class="front-face" src="Cats/Cat_1.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat1">
+    <img class="front-face" src="Cats/Cat_18.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat1">
+    <img class="front-face" src="Cats/Cat_18.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat2">
+    <img class="front-face" src="Cats/Cat_2.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat2">
+    <img class="front-face" src="Cats/Cat_2.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat4">
+    <img class="front-face" src="Cats/Cat_4.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat4">
+    <img class="front-face" src="Cats/Cat_4.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="dog1">
+    <img class="front-face" src="Dogs/Dog_1.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="dog1">
+    <img class="front-face" src="Dogs/Dog_1.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="dog13">
+    <img class="front-face" src="Dogs/Dog_13.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="dog13">
+    <img class="front-face" src="Dogs/Dog_13.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="dog19">
+    <img class="front-face" src="Dogs/Dog_19.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="dog19">
+    <img class="front-face" src="Dogs/Dog_19.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat3">
+    <img class="front-face" src="Cats/Cat_3.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat3">
+    <img class="front-face" src="Cats/Cat_3.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat5">
+    <img class="front-face" src="Cats/Cat_5.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="cat5">
+    <img class="front-face" src="Cats/Cat_5.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="dog12">
+    <img class="front-face" src="Dogs/Dog_12.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-medium" data-animal="dog12">
+    <img class="front-face" src="Dogs/Dog_12.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+  
+</section>
+
+<!--------------------------------###----------------------------------------->
+<!--------------------------------###----------------------------------------->
+<!--------------------------------###----------------------------------------->
+
+<section id="game-hard" class="memory-game">
+
+  <div class="card memory-card-hard" data-animal="cat1">
+    <img class="front-face" src="Cats/Cat_1.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat1">
+    <img class="front-face" src="Cats/Cat_1.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat18">
+    <img class="front-face" src="Cats/Cat_18.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat18">
+    <img class="front-face" src="Cats/Cat_18.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat2">
+    <img class="front-face" src="Cats/Cat_2.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat2">
+    <img class="front-face" src="Cats/Cat_2.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat4">
+    <img class="front-face" src="Cats/Cat_4.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat4">
+    <img class="front-face" src="Cats/Cat_4.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog1">
+    <img class="front-face" src="Dogs/Dog_1.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog1">
+    <img class="front-face" src="Dogs/Dog_1.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog29">
+    <img class="front-face" src="Dogs/Dog_29.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog29">
+    <img class="front-face" src="Dogs/Dog_29.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog19">
+    <img class="front-face" src="Dogs/Dog_19.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog19">
+    <img class="front-face" src="Dogs/Dog_19.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat3">
+    <img class="front-face" src="Cats/Cat_3.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat3">
+    <img class="front-face" src="Cats/Cat_3.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat5">
+    <img class="front-face" src="Cats/Cat_5.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat5">
+    <img class="front-face" src="Cats/Cat_5.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog12">
+    <img class="front-face" src="Dogs/Dog_12.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog12">
+    <img class="front-face" src="Dogs/Dog_12.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog13">
+    <img class="front-face" src="Dogs/Dog_13.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog13">
+    <img class="front-face" src="Dogs/Dog_13.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog14">
+    <img class="front-face" src="Dogs/Dog_14.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="dog14">
+    <img class="front-face" src="Dogs/Dog_14.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat20">
+    <img class="front-face" src="Cats/Cat_20.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat20">
+    <img class="front-face" src="Cats/Cat_20.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat21">
+    <img class="front-face" src="Cats/Cat_21.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat21">
+    <img class="front-face" src="Cats/Cat_21.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat22">
+    <img class="front-face" src="Cats/Cat_22.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+
+  <div class="card memory-card-hard" data-animal="cat22">
+    <img class="front-face" src="Cats/Cat_22.png">
+    <div class="back-face">
+      <h2>?</h2>
+    </div>
+  </div>
+  
+</section>
+
+</body>
+<script src="desafio.js"></script>
