@@ -11,7 +11,7 @@ btnMedium.addEventListener('click', medium);
 btnHard.addEventListener('click', hard);
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-let hasFlippedCard = false;
+let [hasFlippedCard, easyPage, mediumPage, hardPage] = [false, false, false, false];
 let firstCard, secondCard;
 let lockBoard = false;
 
@@ -36,7 +36,13 @@ function checkForMatch() {
   if (firstCard.dataset.animal === secondCard.dataset.animal) {
     disableCards();
     counter.push(1);
-    if (counter.length === 6) restart();
+    if (easyPage === true && counter.length === 6) {
+      restart()
+    }else if(mediumPage === true && counter.length === 10) {
+      restart()
+    }else if (hardPage === true && counter.length === 15) {
+      restart()
+    }
     return;
   }
   document.body.style.backgroundColor = '#e25454ea';
@@ -73,6 +79,7 @@ function resetBoard() {
 })();
 
 function easy() {
+  easyPage = true;
   const el = document.getElementById('game-easy');
 
   el.style.display = 'flex';
@@ -80,6 +87,7 @@ function easy() {
 }
 
 function medium() {
+  mediumPage = true;
   const el = document.getElementById('game-medium');
 
   el.style.display = 'flex';
@@ -87,12 +95,12 @@ function medium() {
 }
 
 function hard() {
+  hardPage = true;
   const el = document.getElementById('game-hard');
 
   el.style.display = 'flex';
   boxDificulty.style.display = 'none';
 }
-
 
 function restart() {
   submit.style.display = 'block';
