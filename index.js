@@ -10,13 +10,12 @@ const btnHard = document.getElementById('hard');
 btnEasy.addEventListener('click', easy);
 btnMedium.addEventListener('click', medium);
 btnHard.addEventListener('click', hard);
+submit.addEventListener('click', restart)
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 let [hasFlippedCard, easyPage, mediumPage, hardPage] = [false, false, false, false];
 let firstCard, secondCard;
 let lockBoard = false;
-
-let counter = []
 
 function flipCard() {
   if (lockBoard) return;
@@ -36,14 +35,6 @@ function flipCard() {
 function checkForMatch() {
   if (firstCard.dataset.animal === secondCard.dataset.animal) {
     disableCards();
-    counter.push(1);
-    if (easyPage === true && counter.length === 6) {
-      restart()
-    }else if(mediumPage === true && counter.length === 10) {
-      restart()
-    }else if (hardPage === true && counter.length === 15) {
-      restart()
-    }
     return;
   }
   document.body.style.backgroundColor = '#e25454ea';
@@ -110,6 +101,5 @@ function hard() {
 }
 
 function restart() {
-  document.body.style.backgroundColor = '#13f067cc';
-  submit.addEventListener('click', () => { document.location.reload() });
+  document.location.reload();
 }
