@@ -1,5 +1,6 @@
 const cards = document.querySelectorAll('.card');
-const submit = document.getElementById('restart');
+const box = document.getElementById('box');
+const submit = document.getElementById('card-restart');
 
 const boxDificulty = document.getElementById('dificulty');
 const btnEasy = document.getElementById('easy');
@@ -22,7 +23,7 @@ function flipCard() {
   if (this === firstCard) return;
 
   this.classList.add('flip');
-  document.body.style.backgroundColor = '#ffffff';
+  document.body.style.backgroundColor = 'rgb(117, 117, 117';
 
   if (!hasFlippedCard) {
     hasFlippedCard = true;
@@ -83,7 +84,9 @@ function easy() {
   const el = document.getElementById('game-easy');
 
   el.style.display = 'flex';
+  submit.style.display = 'flex';
   boxDificulty.style.display = 'none';
+  box.style.display = 'none';
 }
 
 function medium() {
@@ -91,7 +94,9 @@ function medium() {
   const el = document.getElementById('game-medium');
 
   el.style.display = 'flex';
+  submit.style.display = 'flex';
   boxDificulty.style.display = 'none';
+  box.style.display = 'none';
 }
 
 function hard() {
@@ -99,11 +104,12 @@ function hard() {
   const el = document.getElementById('game-hard');
 
   el.style.display = 'flex';
+  submit.style.display = 'flex';
   boxDificulty.style.display = 'none';
+  box.style.display = 'none';
 }
 
 function restart() {
-  submit.style.display = 'block';
-  document.body.style.backgroundColor = 'rgb(231, 231, 231)';
+  document.body.style.backgroundColor = '#13f067cc';
   submit.addEventListener('click', () => { document.location.reload() });
 }
