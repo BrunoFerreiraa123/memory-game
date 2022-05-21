@@ -70,7 +70,7 @@ input#hard {
     font-size: 25px;
     border:2px solid #ccc;
     box-shadow: 3px 4px 14px -2px #000000;
-    margin:0 30px;
+    margin-left: 30px;
     border-radius: 20px;
     outline: none;
     background-color: rgb(48, 48, 48);
@@ -174,4 +174,10 @@ input#hard {
     transform: translate(-50%,-50%);
     font-size: 100px;
     color:#fffffff5;
+}
+
+@media  screen and (max-width:1260px) {
+    div.box {
+        width: 90%;
+    }
 }
