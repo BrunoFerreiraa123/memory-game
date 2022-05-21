@@ -13,7 +13,7 @@ btnHard.addEventListener('click', hard);
 submit.addEventListener('click', restart)
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-let [hasFlippedCard, easyPage, mediumPage, hardPage] = [false, false, false, false];
+let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 
@@ -71,35 +71,27 @@ function resetBoard() {
 })();
 
 function easy() {
-  easyPage = true;
   const el = document.getElementById('game-easy');
-
-  el.style.display = 'flex';
-  submit.style.display = 'flex';
-  boxDificulty.style.display = 'none';
-  box.style.display = 'none';
+  showGame(el)
 }
 
 function medium() {
-  mediumPage = true;
   const el = document.getElementById('game-medium');
-
-  el.style.display = 'flex';
-  submit.style.display = 'flex';
-  boxDificulty.style.display = 'none';
-  box.style.display = 'none';
+  showGame(el)
 }
 
 function hard() {
-  hardPage = true;
   const el = document.getElementById('game-hard');
-
-  el.style.display = 'flex';
-  submit.style.display = 'flex';
-  boxDificulty.style.display = 'none';
-  box.style.display = 'none';
+  showGame(el)
 }
 
 function restart() {
   document.location.reload();
+}
+
+function showGame(el) {
+  el.style.display = 'flex';
+  submit.style.display = 'flex';
+  boxDificulty.style.display = 'none';
+  box.style.display = 'none';
 }
