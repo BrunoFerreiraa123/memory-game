@@ -9,7 +9,7 @@ body {
     height: 100vh;
     display: flex;
     background-color: rgb(117, 117, 117);
-    overflow: hidden;
+    /* overflow: hidden; */
     flex-wrap: wrap;
 
 }
@@ -25,7 +25,7 @@ div.box {
 div.card-title {
     width: 300px;
     height: 300px;
-    background-color: rgb(48, 48, 48);  
+    background-color: rgb(48, 48, 48);
     border-radius: 15px;
     box-shadow: 3px 4px 14px -2px rgb(88, 88, 88);
     display: flex;
@@ -43,6 +43,7 @@ div.card-restart {
     display: none;
     align-items: center;
     margin: 0 auto;
+    order: 2;
     justify-content: flex-end;
     width:15%
 }
@@ -75,11 +76,12 @@ input#hard {
     outline: none;
     background-color: rgb(48, 48, 48);
     color: #fffffff5;
-    border: 0;;
+    border: 0;
     cursor: pointer;
 }
-  
+
 #game-easy{
+    order: 1;
     width: 100vw;
     max-width: 1200px;
     margin:50px auto;
@@ -148,7 +150,7 @@ input#hard {
 .memory-card.flip {transform: rotateY(180deg);}
 .memory-card-medium.flip {transform: rotateY(180deg);}
 .memory-card-hard.flip {transform: rotateY(180deg);}
-  
+
 .front-face,
 .back-face {
     width: 100%;
@@ -176,9 +178,26 @@ input#hard {
     color:#fffffff5;
 }
 
+<<<<<<< HEAD
 @media  screen and (max-width:1260px) {
     
+=======
+@media  screen and (max-width:1400px) {
+>>>>>>> 6a030f38a626728b6f68927e731f46fe87831d08
     div.box {
-        width: 90%;
+        width: 100%;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        }
+
+    #game-easy {
+        margin: 45px auto 30px auto;
+    }
+
+    .memory-card {
+        width: calc(100% / 5);
+        height: 150px;
     }
 }
