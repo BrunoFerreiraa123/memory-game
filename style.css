@@ -177,6 +177,7 @@ input#hard {
 }
 
 @media  screen and (max-width:1260px) {
+    
     div.box {
         width: 90%;
     }
