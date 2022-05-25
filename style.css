@@ -277,6 +277,27 @@ input#hard {
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:480px) {
+    div.card-title {
+        width: 220px;
+        height: 220px;
+    }
 
+    div.card-title h2{
+        font-size:45px;
+    }
+
+    div.card-restart {
+        margin-bottom: -25px;
+        width: 100px;
+    }
+
+    #game-easy {
+        justify-content: space-around;
+        height: 50%;
+    }  
+    .memory-card {
+        width: calc(100% / 4);
+        height: 35%;
+    }  
 }
