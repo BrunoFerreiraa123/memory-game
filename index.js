@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.card');
 const box = document.getElementById('box');
 const submit = document.getElementById('card-restart');
+const modal = document.getElementById('modal')
 
 const boxDificulty = document.getElementById('dificulty');
 const btnEasy = document.getElementById('easy');
@@ -13,9 +14,11 @@ btnHard.addEventListener('click', hard);
 submit.addEventListener('click', restart)
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-let hasFlippedCard = false;
+let [hasFlippedCard, easyPage, mediumPage, hardPage] = [false, false, false, false];
 let firstCard, secondCard;
 let lockBoard = false;
+
+let counter = [];
 
 function flipCard() {
   if (lockBoard) return;
@@ -35,6 +38,14 @@ function flipCard() {
 function checkForMatch() {
   if (firstCard.dataset.animal === secondCard.dataset.animal) {
     disableCards();
+    counter.push(1);
+    if(easyPage === true && counter.length === 6) {
+      modal.style.display = "block"
+    }else if (mediumPage === true && counter.length === 10) {
+      modal.style.display = "block"
+    }else if (hardPage === true && counter.length === 15) {
+      modal.style.display = "block"
+    }
     return;
   }
   document.body.style.backgroundColor = '#e25454ea';
@@ -71,16 +82,19 @@ function resetBoard() {
 })();
 
 function easy() {
+  easyPage = true
   const el = document.getElementById('game-easy');
   showGame(el)
 }
 
 function medium() {
+  mediumPage = true
   const el = document.getElementById('game-medium');
   showGame(el)
 }
 
 function hard() {
+  hardPage = true
   const el = document.getElementById('game-hard');
   showGame(el)
 }
