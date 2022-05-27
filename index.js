@@ -109,3 +109,66 @@ function showGame(el) {
   boxDificulty.style.display = 'none';
   box.style.display = 'none';
 }
+
+const inicio = document.getElementById('inicio');
+const fim = document.getElementById('fim');
+
+inicio.addEventListener('click', iniciaCronometro);
+fim.addEventListener('click', pausaCronometro);
+
+let hour = 0;
+let minutes = 0;
+let seconds = 0;
+let milliseconds = 0;
+let cronometro;
+
+function iniciaCronometro() {
+  pausaCronometro();
+  reset();
+  cronometro = setInterval(() => timer(), 10)
+}
+
+function timer() {
+  if ((milliseconds += 10) === 1000) {
+    milliseconds = 0;
+    seconds++
+  };
+  if (seconds === 60) {
+    seconds = 0;
+    minutes++
+  };
+  if (hour === 60) {
+    minutes = 0;
+    hour++
+  }
+
+  exibeTempo();
+}
+
+function pausaCronometro() {
+  clearInterval(cronometro);
+  // exibeTempo()
+}
+
+function reset() {
+  hour = 0;
+  minutes = 0;
+  seconds = 0;
+  milliseconds = 0;
+  document.getElementById('hour').innerText = '00';
+    document.getElementById('minute').innerText = '00';
+    document.getElementById('second').innerText = '00';
+    document.getElementById('millisecond').innerText = '00';
+}
+
+function exibeTempo() {
+  document.getElementById('hour').innerText = formatTime(hour)
+  document.getElementById('minute').innerText = formatTime(minutes)
+  document.getElementById('second').innerText = formatTime(seconds)
+  document.getElementById('millisecond').innerText = formatTime(milliseconds)
+}
+
+function formatTime(num) {
+  return num > 10 ? num : `0${num}`
+}
+
