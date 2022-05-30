@@ -25,15 +25,32 @@ div.modal {
 div.box-modal {
     width: 600px;
     height: 300px;
-    background-color: #34f013;
+    background-color: #13f068;
     border: 10px solid #fffffff5;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
+
 div.box-modal h2 {
-    color: #fffffff5;
+    margin-top: 15%;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+div.timer {
+    display: flex;
+    justify-content: center;
+    color:#fffffff5;
+    width:100%;
+}
+
+div.timer span {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 div.box {
@@ -249,7 +266,7 @@ input#hard {
     }
 }
 
-@media screen and (max-width:801px) {
+@media screen and (max-width:1000px) {
     div.box {
         width: 100%;
         margin:0 auto;
@@ -260,7 +277,7 @@ input#hard {
 
     div#dificulty {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-wrap: wrap;
         width: 40%;
     }    
@@ -299,6 +316,13 @@ input#hard {
     }
 }
 
+@media screen and (max-width:650px) {
+    div.box-modal {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width:480px) {
     div.card-title {
         width: 220px;
@@ -321,5 +345,9 @@ input#hard {
     .memory-card {
         width: calc(100% / 4);
         height: 35%;
-    }  
+    } 
+    div.box-modal {
+        width: 400px;
+        margin: 0 auto;
+    } 
 }
