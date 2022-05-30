@@ -39,12 +39,19 @@ function checkForMatch() {
   if (firstCard.dataset.animal === secondCard.dataset.animal) {
     disableCards();
     counter.push(1);
+    console.log(counter.length)
+    if(counter.length === 1) {
+      iniciaCronometro();}
+
     if(easyPage === true && counter.length === 6) {
       modal.style.display = "block"
+      pausaCronometro()
     }else if (mediumPage === true && counter.length === 10) {
       modal.style.display = "block"
+      pausaCronometro()
     }else if (hardPage === true && counter.length === 15) {
       modal.style.display = "block"
+      pausaCronometro()
     }
     return;
   }
@@ -82,15 +89,15 @@ function resetBoard() {
 })();
 
 function easy() {
-  easyPage = true
+  easyPage = true;
   const el = document.getElementById('game-easy');
-  showGame(el)
+  showGame(el);
 }
 
 function medium() {
-  mediumPage = true
+  mediumPage = true;
   const el = document.getElementById('game-medium');
-  showGame(el)
+  showGame(el);
 }
 
 function hard() {
@@ -109,12 +116,6 @@ function showGame(el) {
   boxDificulty.style.display = 'none';
   box.style.display = 'none';
 }
-
-const inicio = document.getElementById('inicio');
-const fim = document.getElementById('fim');
-
-inicio.addEventListener('click', iniciaCronometro);
-fim.addEventListener('click', pausaCronometro);
 
 let hour = 0;
 let minutes = 0;
@@ -147,7 +148,6 @@ function timer() {
 
 function pausaCronometro() {
   clearInterval(cronometro);
-  // exibeTempo()
 }
 
 function reset() {
