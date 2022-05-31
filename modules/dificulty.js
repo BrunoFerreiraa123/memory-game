@@ -2,6 +2,7 @@ const boxDificulty = document.getElementById('dificulty');
 const box = document.getElementById('box');
 const submit = document.getElementById('card-restart');
 
+
 let [easyPage, mediumPage, hardPage] = [false, false, false]
 
 function easy() {
@@ -13,12 +14,14 @@ function easy() {
 function medium() {
     mediumPage = true;
     const el = document.getElementById('game-medium');
+    submit.style.justifyContent = 'center';
     showGame(el);
 }
 
 function hard() {
     hardPage = true
     const el = document.getElementById('game-hard');
+    submit.style.justifyContent = 'center';
     showGame(el)
 }
 
