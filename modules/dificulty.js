@@ -3,10 +3,15 @@ const box = document.getElementById('box');
 const submit = document.getElementById('card-restart');
 
 
-let [easyPage, mediumPage, hardPage] = [false, false, false]
+let [easyPage, mediumPage, hardPage] = [false, false, false];
+let width;
 
 function easy() {
     easyPage = true;
+    width = window.innerWidth;
+    if (width === 1440) {
+        submit.style.justifyContent = 'flex-end';
+    }
     const el = document.getElementById('game-easy');
     showGame(el);
 }
@@ -14,14 +19,16 @@ function easy() {
 function medium() {
     mediumPage = true;
     const el = document.getElementById('game-medium');
-    submit.style.justifyContent = 'center';
     showGame(el);
 }
 
 function hard() {
     hardPage = true
+    width = window.innerWidth;
+    if (width === 1680) {
+        submit.style.justifyContent = 'center';
+    }
     const el = document.getElementById('game-hard');
-    submit.style.justifyContent = 'center';
     showGame(el)
 }
 
