@@ -295,7 +295,6 @@ input#hard {
         margin-top:15px;
         margin-bottom: 15px;
     }
-    
 }
 
 @media screen and (max-width:1024px) {
@@ -336,13 +335,6 @@ input#hard {
     }
 }
 
-@media screen and (max-width:650px) {
-    div.box-modal {
-        width: 500px;
-        margin: 0 auto;
-    }
-}
-
 @media screen and (max-width:480px) {
     div.box {
         width: 90vw;
@@ -355,6 +347,12 @@ input#hard {
 
     div.card-title h2{
         font-size:45px;
+    }
+
+    div.card-restart {
+        order: 2;
+        align-items: center;
+        justify-content: center;
     }
 
     #game-easy {
@@ -378,7 +376,7 @@ input#hard {
 
     #game-hard {
         order:1;
-        height: 90%;
+        height: 85%;
         margin: 5px auto 0 auto;
         align-items: flex-end;
     }
