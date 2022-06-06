@@ -457,11 +457,21 @@ input#hard {
     #game-hard {
         order:1;
         height: 80%;
+        margin-bottom: -25px;
     }
 
     .memory-card-hard {
         width: calc(100% / 5.5);
         height: calc(100% / 6.5);
+    }
+
+    .back-face h2 {
+        font-size: 60px;
+    }
+
+    div.box-modal {
+        width: 90vw;
+        margin: 0 auto;
     }
 
 }
