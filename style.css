@@ -336,7 +336,7 @@ input#hard {
     }
 }
 
-@media screen and (max-width:480px) {
+/* @media screen and (max-width:480px) {
     div.box {
         width: 90vw;
     }
@@ -395,9 +395,9 @@ input#hard {
         width: 90vw;
         margin: 0 auto;
     }
-}
+} */
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:480px) {
     div.box {
         width: 80vw;
     }
