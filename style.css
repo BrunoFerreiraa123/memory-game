@@ -336,67 +336,6 @@ input#hard {
     }
 }
 
-/* @media screen and (max-width:480px) {
-    div.box {
-        width: 90vw;
-    }
-
-    div.card-title {
-        width: 220px;
-        height: 220px;
-    }
-
-    div.card-title h2{
-        font-size:45px;
-    }
-
-    div.card-restart {
-        order: 2;
-        align-items: center;
-        justify-content: center;   
-    }
-
-    #game-easy {
-        justify-content: space-around;
-        height: 70%;
-    }
-    .memory-card {
-        width: calc(100% / 3.5);
-        height: calc(100% / 3.8);
-    }
-
-    #game-medium {
-        order:1;
-        height: 80%;
-    }
-
-    .memory-card-medium {
-        width: calc(100% / 4.3);
-        height: calc(100% / 5.2);
-    }
-
-    #game-hard {
-        order:1;
-        height: 85%;
-        margin: 5px auto 0 auto;
-        align-items: flex-end;
-    }
-
-    .memory-card-hard {
-        width: calc(100% / 5.5);
-        height: calc(100% / 6.5);
-    }
-
-    .back-face h2 {
-        font-size: 60px;
-    }
-
-    div.box-modal {
-        width: 90vw;
-        margin: 0 auto;
-    }
-} */
-
 @media screen and (max-width:480px) {
     div.box {
         width: 80vw;
@@ -434,9 +373,9 @@ input#hard {
         padding: 0 8px;
     }
 
-
     #game-easy {
-        /* justify-content: space-around; */
+        justify-content: space-around;
+        margin-top: 40px;
         height: 65%;
     }
     .memory-card {
@@ -447,6 +386,7 @@ input#hard {
     #game-medium {
         order:1;
         height: 70%;
+        margin-bottom: -45px;
     }
 
     .memory-card-medium {
