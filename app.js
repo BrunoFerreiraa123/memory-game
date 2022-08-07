@@ -27,7 +27,7 @@ function flipCard() {
   if (this === firstCard) return;
 
   this.classList.add('flip');
-  document.body.style.backgroundColor = 'rgb(117, 117, 117)';
+  document.body.style.backgroundColor = '#97D2FB';
 
   if (!hasFlippedCard) {
     hasFlippedCard = true;
@@ -53,6 +53,7 @@ function checkForMatch() {
   document.body.style.backgroundColor = '#e25454ea';
   unflipCards();
 }
+
 function disableCards() {
   document.body.style.backgroundColor = '#13f067cc';
   firstCard.removeEventListener('click', flipCard);
@@ -60,6 +61,7 @@ function disableCards() {
 
   resetBoard()
 }
+
 function unflipCards() {
   lockBoard = true;
 
@@ -67,7 +69,8 @@ function unflipCards() {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
 
-    resetBoard()
+    resetBoard();
+    document.body.style.backgroundColor = '#97D2FB';
   }, 1000);
 }
 
