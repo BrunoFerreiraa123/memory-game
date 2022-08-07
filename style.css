@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: #97D2FB; 
+    --primary-color: #E1EFF6;
+    --text-color: #25618c;
+}
+
 body {
     width:100%;
     height: 100vh;
     display: flex;
     overflow: hidden;
-    background-color: rgb(117, 117, 117);
+    background-color: var(--bg-color);
     /* overflow: hidden; */
     flex-wrap: wrap;
 
@@ -27,7 +33,7 @@ div.box-modal {
     width: 600px;
     height: 300px;
     background-color: #e79b53;
-    border: 6px solid #fffffff5;
+    border: 6px solid  var(--text-color);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -45,7 +51,7 @@ div.box-modal h2 {
 div.timer {
     display: flex;
     justify-content: center;
-    color:#fffffff5;
+    color: var(--text-color);
     width:100%;
 }
 
@@ -65,7 +71,7 @@ div.box {
 div.card-title {
     width: 300px;
     height: 300px;
-    background-color: rgb(48, 48, 48);
+    background-color: var(--primary-color);
     border-radius: 15px;
     box-shadow: 3px 4px 14px -2px rgb(88, 88, 88);
     display: flex;
@@ -76,7 +82,7 @@ div.card-title {
 
 div.box h2 {
     font-size: 60px;
-    color:#fffffff5;
+    color: var(--text-color);
 }
 
 div.card-restart {
@@ -97,8 +103,8 @@ input#restart {
     border-bottom:5px solid rgb(71, 71, 71);
     border-radius: 15px;
     outline: none;
-    background-color: rgb(48, 48, 48);
-    color: #fffffff5;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     cursor: pointer;
 
 }
@@ -114,8 +120,8 @@ input#hard {
     margin-left: 30px;
     border-radius: 20px;
     outline: none;
-    background-color: rgb(48, 48, 48);
-    color: #fffffff5;
+    background-color: var(--primary-color);
+    color:  var(--text-color);
     border: 0;
     cursor: pointer;
 }
@@ -206,7 +212,7 @@ input#hard {
 }
 
 .back-face {
-    background-color: rgb(48, 48, 48);
+    background-color: var(--primary-color);
 }
 .back-face h2 {
     position: absolute;
@@ -214,7 +220,7 @@ input#hard {
     top:50%;
     transform: translate(-50%,-50%);
     font-size: 100px;
-    color:#fffffff5;
+    color: var(--text-color);
 }
 
 @media screen and (max-width:1680px) {
