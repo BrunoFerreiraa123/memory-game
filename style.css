@@ -11,79 +11,48 @@
 }
 
 body {
-    width:100%;
+    width:100vw;
     height: 100vh;
-    display: flex;
-    overflow: hidden;
     background-color: var(--bg-color);
-    /* overflow: hidden; */
-    flex-wrap: wrap;
-
-}
-
-div.modal {
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-
-div.box-modal {
-    width: 600px;
-    height: 300px;
-    background-color: #e79b53;
-    border: 6px solid  var(--text-color);
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-div.box-modal h2 {
-    margin-top: 15%;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-div.timer {
-    display: flex;
-    justify-content: center;
-    color: var(--text-color);
-    width:100%;
-}
-
-div.timer span {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 div.box {
-    width: 80%;
-    margin:0 auto;
+    width: 100vw;
+    max-width: 1280px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
 }
 
 div.card-title {
-    width: 300px;
+    width: 30%;
+    max-width: 300px;
     height: 300px;
     background-color: var(--primary-color);
     border-radius: 15px;
     box-shadow: 3px 4px 14px -2px rgb(88, 88, 88);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 div.box h2 {
-    font-size: 60px;
+    font-size:2.5vw;
     color: var(--text-color);
 }
+
+div.dificulty {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
 
 div.card-restart {
     display: none;
@@ -114,10 +83,10 @@ input#medium,
 input#hard {
     width: 200px;
     height:60px ;
+    margin-left: 30px;
     font-size: 25px;
     border:2px solid #ccc;
     box-shadow: 3px 4px 14px -2px #000000;
-    margin-left: 30px;
     border-radius: 20px;
     outline: none;
     background-color: var(--primary-color);
@@ -222,6 +191,47 @@ input#hard {
     font-size: 100px;
     color: var(--text-color);
 }
+
+
+div.modal {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+div.box-modal {
+    width: 600px;
+    height: 300px;
+    background-color: #e79b53;
+    border: 6px solid  var(--text-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.box-modal h2 {
+    margin-top: 15%;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+div.timer {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    width:100%;
+}
+
+div.timer span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 
 @media screen and (max-width:1680px) {
     div.card-restart {
