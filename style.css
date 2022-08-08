@@ -41,7 +41,7 @@ div.card-title {
 }
 
 div.box h2 {
-    font-size:2.5vw;
+    font-size: 60px;;
     color: var(--text-color);
 }
 
@@ -53,6 +53,22 @@ div.dificulty {
     text-align: center;
 }
 
+input#easy,
+input#medium,
+input#hard {
+    width: 200px;
+    height:60px ;
+    margin-left: 30px;
+    font-size: 25px;
+    border:2px solid #ccc;
+    box-shadow: 3px 4px 14px -2px #000000;
+    border-radius: 20px;
+    outline: none;
+    background-color: var(--primary-color);
+    color:  var(--text-color);
+    border: 0;
+    cursor: pointer;
+}
 
 div.card-restart {
     display: none;
@@ -76,23 +92,6 @@ input#restart {
     color: var(--text-color);
     cursor: pointer;
 
-}
-
-input#easy,
-input#medium,
-input#hard {
-    width: 200px;
-    height:60px ;
-    margin-left: 30px;
-    font-size: 25px;
-    border:2px solid #ccc;
-    box-shadow: 3px 4px 14px -2px #000000;
-    border-radius: 20px;
-    outline: none;
-    background-color: var(--primary-color);
-    color:  var(--text-color);
-    border: 0;
-    cursor: pointer;
 }
 
 #game-easy{
@@ -352,9 +351,22 @@ div.timer span {
     }
 }
 
+@media screen and (max-width: 768px) {
+    div.card-title {
+        width: 250px;
+        height: 250px;
+    }
+
+    div.box h2 {
+        font-size: 40px;
+    }
+}
+
 @media screen and (max-width:480px) {
     div.box {
-        width: 80vw;
+        width: 100%;
+        flex-flow: column wrap;
+        gap:30px
     }
 
     div.card-title {
@@ -366,27 +378,21 @@ div.timer span {
         font-size:35px;
     }
 
-    div.card-restart {
-        order: 2;
-        align-items: flex-start;
-        justify-content: center;   
-    }
-
-    input#restart {
-        font-size: 1.5rem;
+    div#dificulty {
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     input#easy,
+    input#medium,
     input#hard {
-        height:45px ;
+        width: 150px;
+        height: 40px;
         font-size: 20px;
-        padding: 0 20px;
-    }
-
-    input#medium {
-        height:45px ;
-        font-size: 20px;
-        padding: 0 8px;
+        margin-left: 0;
     }
 
     #game-easy {
@@ -424,6 +430,17 @@ div.timer span {
 
     .back-face h2 {
         font-size: 60px;
+    }
+
+    div.card-restart {
+        order: 2;
+        align-items: flex-start;
+        justify-content: center;   
+    }
+
+
+    input#restart {
+        font-size: 1.5rem;
     }
 
     div.box-modal {
