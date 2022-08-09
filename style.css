@@ -71,17 +71,19 @@ input#hard {
 }
 
 div.card-restart {
+    width:calc(15% + 94px);
+    height: 100vh;
+    margin: 0 0;
     display: none;
     align-items: center;
-    margin: 0 auto;
-    justify-content: flex-end;
-    width:15%
+    justify-content: center;
+    border-right: 5px solid var(--primary-color);
 }
 
 input#restart {
-    width: 150px;
-    height:50px ;
-    font-size: 1.6rem;
+    width: 250px;
+    height: 100px ;
+    font-size: 40px;
     padding: 5px 12px;
     box-shadow: 3px 4px 14px -2px rgb(88, 88, 88);;
     border: 0;
@@ -95,9 +97,9 @@ input#restart {
 }
 
 #game-easy{
-    width: 100vw;
-    max-width: 1200px;
-    margin:50px auto;
+    width: 85%;
+    max-width: 1800px;
+    margin:0 auto;
     display: none;
     justify-content: center;
     flex-wrap: wrap;
@@ -106,7 +108,7 @@ input#restart {
 
 .memory-card {
     width: calc(100% / 4);
-    height: 200px;
+    height: 300px;
     margin: 2px;
     position: relative;
     transform: scale(1);
@@ -187,7 +189,7 @@ input#restart {
     left: 50%;
     top:50%;
     transform: translate(-50%,-50%);
-    font-size: 100px;
+    font-size: 120px;
     color: var(--text-color);
 }
 
@@ -231,138 +233,59 @@ div.timer span {
     font-weight: bold;
 }
 
+@media screen and (max-width:1920px) {
+    .memory-card {
+        width: calc(100% / 5);
+        height: 300px;
+    }
+
+    input#restart {
+        width: 200px;
+        height: 80px;
+    }
+}
+
 
 @media screen and (max-width:1680px) {
     div.card-restart {
-        order: 2;
-        justify-content: flex-end;
+        justify-content: center;
     }
-    #game-easy {
-        order:3;
-    }
-    #game-medium {
-        order:3;
-    }
-
-    #game-hard {
-        order:1;
-        height: 90%;
-        margin: 2px auto;
-        align-items: flex-end;
-    }
-
-    .memory-card-hard {
-        width: calc(100% / 7);
-        height: calc(100% / 5.5);
-    }
-
 }
 
 @media screen and (max-width:1440px) {
-    div.card-restart {
-        order: 2;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #game-easy {
-        order:3;
-        height: 80%;
-        margin: auto;
-    }
-
     .memory-card {
         width: calc(100% / 5);
+        height: 200px;
     }
 
-    #game-medium {
-        order:1;
-        height: 85%;
-        margin: 25px auto 0 auto;
+    div.card-restart {
+        justify-content: center;
+        margin: 0 auto;
     }
 
-    .memory-card-medium {
-        width: calc(100% / 6);
-        height: calc(100% / 4);
-        display: flex;
+    input#restart {
+        width: 150px;
+        height: 60px;
+        font-size: 30px;
     }
 
-    #game-hard {
-        order:1;
-        height: 90%;
-        margin: 10px auto;
-        align-items: flex-end;
+    .back-face h2 {
+        font-size: 80px;
     }
 
-    .memory-card-hard {
-        width: calc(100% / 7);
-        height: calc(100% / 5.2);
-    }
-}
-@media screen and (max-width:1240px) {
-    div#dificulty {
-        display: flex;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        width: 40%;
-    }
-    input#medium {
-        margin-top:15px;
-        margin-bottom: 15px;
-    }
 }
 
 @media screen and (max-width:1024px) {
-    div.box {
-        width: 100%;
-        margin:0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-
-    div.card-restart {
-        order: 2;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #game-easy {
-        order:1;
-        height: 60%;
-        margin-bottom: 70px;
-    }
-
     .memory-card {
-        width: calc(100% / 5);
-        height: 40%;
-    }
-
-    #game-medium {
-        order:1;
-        height: 85%;
-        margin: 30px 0 0 0;
-    }
-
-    .memory-card-medium {
-        width: calc(100% / 6);
-        display: flex;
-        align-items: flex-start;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    div.card-title {
-        width: 250px;
-        height: 250px;
-    }
-
-    div.box h2 {
-        font-size: 40px;
+        width: calc(100% / 4);
+        height: 160px;
     }
 }
 
 @media screen and (max-width:480px) {
+    body {
+        flex-wrap: wrap;
+    }
     div.box {
         width: 100%;
         flex-flow: column wrap;
@@ -395,57 +318,43 @@ div.timer span {
         margin-left: 0;
     }
 
+    div.card-restart {
+        width: 100%;
+        order: 2;
+        height: 20%;
+        margin: 0;
+        border-right: 0;
+        border-top:5px solid var(--primary-color);
+    }
+
     #game-easy {
-        justify-content: space-around;
-        margin-top: 40px;
-        margin-bottom: 0;
-        height: 65%;
-    }
-    .memory-card {
-        width: calc(100% / 3.5);
-        height: calc(100% / 3.8);
-    }
-
-    #game-medium {
-        order:1;
-        height: 70%;
-        margin-bottom: -45px;
-    }
-
-    .memory-card-medium {
-        width: calc(100% / 4.3);
-        height: calc(100% / 5.2);
-    }
-
-    #game-hard {
-        order:1;
+        order: 1;
+        width: 100%;
         height: 80%;
-        margin-bottom: -35px;
+        align-items: center;
+        padding: 30px 0;
     }
 
-    .memory-card-hard {
-        width: calc(100% / 5.5);
-        height: calc(100% / 6.5);
+    .memory-card {
+        width: calc(100% / 4);
+        height: 100px;
     }
 
     .back-face h2 {
-        font-size: 60px;
+        font-size: 60px; ;
     }
-
-    div.card-restart {
-        order: 2;
-        align-items: flex-start;
-        justify-content: center;   
-    }
-
-
-    input#restart {
-        font-size: 1.5rem;
-    }
-
-    div.box-modal {
-        width: 90vw;
-        margin: 0 auto;
-    }
-
 }
+
+@media screen and (max-width:320px) {
+    .memory-card {
+        width: calc(100% / 4);
+        height: 80px;
+    }
+
+    input#restart{
+        font-size: 20px;
+        width: 130px;
+        height: 50px;
+    }
+
+}    
