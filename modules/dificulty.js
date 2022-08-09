@@ -8,10 +8,10 @@ let width;
 
 function easy() {
     easyPage = true;
-    width = window.innerWidth;
-    if (width === 1440) {
-        submit.style.justifyContent = 'flex-end';
-    }
+    // width = window.innerWidth;
+    // if (width === 1440) {
+    //     submit.style.justifyContent = 'flex-end';
+    // }
     const el = document.getElementById('game-easy');
     showGame(el);
 }
@@ -24,10 +24,10 @@ function medium() {
 
 function hard() {
     hardPage = true
-    width = window.innerWidth;
-    if (width === 1680) {
-        submit.style.justifyContent = 'center';
-    }
+    // width = window.innerWidth;
+    // if (width === 1680) {
+    //     submit.style.justifyContent = 'center';
+    // }
     const el = document.getElementById('game-hard');
     showGame(el)
 }
