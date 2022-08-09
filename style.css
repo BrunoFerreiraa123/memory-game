@@ -139,20 +139,19 @@ input#restart {
 }
 
 #game-hard {
-    width: 100vw;
-    height: 100vh;
-    max-width: 1600px;
-    margin: 15px auto;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
     display: none;
     justify-content: center;
     flex-wrap: wrap;
+    gap:10px;
     perspective: 1000px;
 }
 
 .memory-card-hard  {
     width: calc(100% / 7);
-    height: calc(94% / 5.5);
-    margin: 2px;
+    height: 250px;
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
@@ -239,14 +238,15 @@ div.timer span {
         width: calc(100% / 5);
         height: 300px;
     }
-
-    #game-medium{
-        
-    }
     
     .memory-card-medium  {
         width: calc(100% / 6);
         height: 225px;
+    }
+
+    .memory-card-hard {
+        width: calc(100% / 7);
+        height: 200px;
     }
 
     input#restart {
@@ -259,6 +259,10 @@ div.timer span {
     div.card-restart {
         justify-content: center;
     }
+
+    #game-hard {
+        gap: 5px;
+    }
 }
 
 @media screen and (max-width:1440px) {
@@ -270,6 +274,15 @@ div.timer span {
     .memory-card-medium  {
         width: calc(100% / 6);
         height: 200px;
+    }
+
+    #game-hard {
+        gap: 10px;
+    }
+
+    .memory-card-hard {
+        width: calc(100% / 6.5);
+        height: 170px; 
     }
 
     div.card-restart {
@@ -298,6 +311,15 @@ div.timer span {
     .memory-card-medium  {
         width: calc(100% / 6);
         height: 125px;
+    }
+
+    #game-hard {
+        gap: 5px;
+    }
+
+    .memory-card-hard {
+        width: calc(100% / 6);
+        height: 120px; 
     }
 
     input#restart {
@@ -376,8 +398,20 @@ div.timer span {
         height: 100px;
     }
 
+    #game-hard {
+        padding: 40px 0;
+        width: 100%;
+        height: 80%;
+        align-items: center;
+    }
+
+    .memory-card-hard {
+        width: calc(100% / 5.5);
+        height: 80px; 
+    }
+
     .back-face h2 {
-        font-size: 60px; ;
+        font-size: 50px; ;
     }
 }
 
@@ -397,6 +431,20 @@ div.timer span {
     .memory-card-medium {
         width: calc(100% / 4.5);
         height: 70px;
+    }
+
+    #game-hard {
+        padding:10px 0;
+        align-items: center;
+    }
+
+    .memory-card-hard {
+        width: calc(100% / 5.5);
+        height: 60px; 
+    }
+
+    .back-face h2 {
+        font-size: 50px; ;
     }
     
     input#restart{
