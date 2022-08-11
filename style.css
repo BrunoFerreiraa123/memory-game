@@ -97,68 +97,6 @@ input#restart {
 
 }
 
-#game-easy{
-    width: 85%;
-    max-width: 1200px;
-    margin:0 auto;
-    display: none;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    perspective: 1000px;
-}
-
-.memory-card {
-    width: calc(100% / 5);
-    height: 220px;
-    margin: 2px;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
-}
-
-#game-medium{
-    width: 85%;
-    max-width: 1800px;
-    margin: 0 auto;
-    display: none;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
-    perspective: 1000px;
-}
-
-.memory-card-medium  {
-    width: calc(100% / 6);
-    height: 220px;
-    margin: 2px;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
-}
-
-#game-hard {
-    width: 100%;
-    max-width: 1800px;
-    margin: 0 auto;
-    display: none;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap:5px;
-    perspective: 1000px;
-}
-
-.memory-card-hard  {
-    width: calc(100% / 7);
-    height: 180px;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
-}
-
 .memory-card:active {transform: scale(0.97); transition: transform .2s;}
 .memory-card-medium:active {transform: scale(0.97); transition: transform .2s;}
 .memory-card-hard:active {transform: scale(0.97); transition: transform .2s;}
@@ -296,8 +234,72 @@ div.timer span {
         transform-style: preserve-3d;
         transition: transform .5s;
     }
-}
+} 
 
+
+@media screen and (max-width: 1920px) {
+    #game-easy{
+        width: 85%;
+        max-width: 1200px;
+        margin:0 auto;
+        display: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        perspective: 1000px;
+    }
+    
+    .memory-card {
+        width: calc(100% / 6);
+        height: 20px;
+        margin: 2px;
+        position: relative;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .5s;
+    }
+    
+    #game-medium{
+        width: 85%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        perspective: 1000px;
+    }
+    
+    .memory-card-medium  {
+        width: calc(100% / 6);
+        height: 180px;
+        margin: 2px;
+        position: relative;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .5s;
+    }
+    
+    #game-hard {
+        width: 100%;
+        max-width: 1800px;
+        margin: 0 auto;
+        display: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:5px;
+        perspective: 1000px;
+    }
+    
+    .memory-card-hard  {
+        width: calc(100% / 7);
+        height: 180px;
+        position: relative;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .5s;
+    }
+}
 
 @media screen and (max-width:1680px) {
     div.card-restart {
