@@ -132,44 +132,34 @@ input#restart {
     color: var(--text-color);
 }
 
-
 div.modal {
-    display: none;
+    display: flex;
+    width: 500px;
+    height: 300px;
+    background-color: var(--text-color);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 15px 2px #000000; 
+    box-shadow: 3px 3px 15px 2px #000000;
 }
 
 div.box-modal {
-    width: 600px;
-    height: 300px;
-    background-color: #e79b53;
-    border: 6px solid  var(--text-color);
-    border-radius: 10px;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 20px
 }
 
-div.box-modal h2 {
-    margin-top: 15%;
-    color: #ffffff;
+div.box-modal h2, div.box-modal span {
+    text-align: center;
+    font-size: 30px;
     font-weight: bold;
-    font-size: 2rem;
-}
-
-div.timer {
-    display: flex;
-    justify-content: center;
-    color: var(--text-color);
-    width:100%;
-}
-
-div.timer span {
-    font-size: 1.5rem;
-    font-weight: bold;
+    color: var(--primary-color);
 }
 
 @media screen and (max-width:2560px) {
@@ -235,7 +225,6 @@ div.timer span {
         transition: transform .5s;
     }
 } 
-
 
 @media screen and (max-width: 1920px) {
     #game-easy{
