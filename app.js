@@ -15,6 +15,13 @@ btnHard.addEventListener('click', hard);
 submit.addEventListener('click', restart)
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+document.addEventListener('click', e => {
+  if(e.target === btnEasy || e.target === btnMedium || e.target === btnHard) {
+    startTimer();
+  } else {
+    return 
+  }
+})
 
 let hasFlippedCard = false;
 let firstCard, secondCard;
@@ -42,7 +49,6 @@ function checkForMatch() {
   if (firstCard.dataset.animal === secondCard.dataset.animal) {
     disableCards();
     hits.push(1)
-    if(hits.length === 1) startTimer();
 
     if((easyPage && hits.length === 6) || (mediumPage && hits.length === 10) || (hardPage && hits.length === 15)){
       modal.style.display = "flex"
