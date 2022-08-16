@@ -451,6 +451,10 @@ div.box-modal h2, div.box-modal span {
 }
 
 @media screen and (max-width:320px) {
+    body {
+        height: 95vh;
+    }
+
     .memory-card {
         width: calc(100% / 4);
         height: 80px;
