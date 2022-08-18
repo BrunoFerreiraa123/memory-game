@@ -505,4 +505,11 @@ div.box-modal h2, div.box-modal span {
         font-size: 35px; ;
     }
 
+    div.modal {
+        width:300px;
+    }
+    
+    div.box-modal h2, div.box-modal span {        
+        font-size: 20px;
+    }
 }    
