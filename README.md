@@ -2,7 +2,7 @@
 
 <p>O projeto está no ar nesse link: <a href="https://brunoferreiraa123.github.io/memory-game/memoria.html"> Jogo da Memória</a>, acesse e divirta-se.</p>
 
-<h2>Sobre</h2>
+<h2>:grey_exclamation: Sobre</h2>
 <p>Jogo da memória com imagens de animais para animar o seu dia e exercitar seu cérebro. :cat: :dog:</p>
 
 <h2>:hammer: Ferramentas</h2>
@@ -16,3 +16,5 @@
 <h2>Direito de imagens</h2>
 
 <p>O pacote de imagens foi criado por: <a href="https://www.instagram.com/eythandami.co/">Eythan D'Amico</a> com base em imagens do Unsplash.</p>
+
+<span>Desenvolvido por por Bruno | <a href="https://www.linkedin.com/in/brunoo-ferreiraa/">Linkedin</a></span>
