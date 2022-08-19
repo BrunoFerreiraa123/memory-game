@@ -17,4 +17,5 @@
 
 <p>O pacote de imagens foi criado por: <a href="https://www.instagram.com/eythandami.co/">Eythan D'Amico</a> com base em imagens do Unsplash.</p>
 
+<h2></h2>
 <span>Desenvolvido por por Bruno | <a href="https://www.linkedin.com/in/brunoo-ferreiraa/">Linkedin</a></span>
