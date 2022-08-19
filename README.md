@@ -3,15 +3,13 @@
 <p>O projeto está no ar nesse link: <a href="https://brunoferreiraa123.github.io/memory-game/memoria.html"> Jogo da Memória</a>, acesse e divirta-se.</p>
 
 <h2>Sobre</h2>
-<p>Jogo da memória com imagens de animais para animar o seu dia e exercitar seu cérebro.</p>
+<p>Jogo da memória com imagens de animais para animar o seu dia e exercitar seu cérebro. :cat: :dog:</p>
 
-`:sunny:` | :umbrella: `:umbrella:` | :cloud: `:cloud:` |
-
-<h2>Ferramentas</h2>
+<h2>:hammer: Ferramentas</h2>
 
 <p>Projeto construído 100% com <a href="http://vanilla-js.com/">VanillaJS.</a></p>
 
-<h2>Pré-requisito</h2>
+<h2>:computer: Pré-requisito</h2>
 
 <p>Para executar o projeto na sua máquina, você precisará de um servidor, pois ele foi desenvolvido com módulos JS.</p>
 
